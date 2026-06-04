@@ -326,6 +326,7 @@
                            {!! Form::close() !!}
                            @endif
                         </TD>
+                        @if($systemSetting->allow_payment_method_deletion)
                         <TD class="text-right">
                            {!! Form::open(['action' => ["\App\Http\Controllers\BillingController@deletePaymentMethod",$paymentMethod->id],'id' => 'deletePaymentMethodForm','method' => 'delete']) !!}
                            <button class="btn btn-sm btn-disable-with-msg-on-click" data-message="{{utrans("billing.deleting")}}">
@@ -334,6 +335,7 @@
                            </button>
                            {!! Form::close() !!}
                         </TD>
+                        @endif
                      </TR>
                      @endif
                      @endforeach
@@ -391,6 +393,7 @@
                                  {!! Form::close() !!}
                                  @endif
                               </TD>
+                              @if($systemSetting->allow_payment_method_deletion)
                               <TD class="text-right">
                                  {!! Form::open(['action' => ["\App\Http\Controllers\BillingController@deletePaymentMethod",$paymentMethod->id],'id' => 'deletePaymentMethodForm','method' => 'delete']) !!}
                                  <button class="btn btn-sm" onClick="submit(); this.disabled=true;this.innerHTML='<i class=&quot;fe fe-loader mt-2 mr-2 &quot;></i> {{utrans("billing.deleting")}}'">
@@ -399,6 +402,7 @@
                                  </button>
                                  {!! Form::close() !!}
                               </TD>
+                              @endif
                            </TR>
                            @endif
                            @endforeach

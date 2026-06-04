@@ -412,6 +412,23 @@
                      </label>
                   </div>
                </div>
+               <div class="row mt-1">
+                  <div class="form-group">
+                     <div class="col-auto ">
+                        <!-- Toggle -->
+                        <div class="custom-control custom-checkbox-toggle mt-1">
+                           {{ Form::hidden('allow_payment_method_deletion',0) }}
+                           {!! Form::checkbox("allow_payment_method_deletion",1,$systemSetting->allow_payment_method_deletion,['id' => 'allow_payment_method_deletion', 'class' => 'custom-control-input', 'data-toggle' => 'tooltip', 'data-trigger' => 'hover','data-placement' => 'left','data-offset' => '3','data-html' => 'true', 'data-original-title' => 'Allow customers to remove their saved payment methods']) !!}
+                           <label class="custom-control-label" for="allow_payment_method_deletion"></label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-auto mt-2">
+                     <label>
+                        Allow Payment Method Deletion
+                     </label>
+                  </div>
+               </div>
             </div>
          </div>
 

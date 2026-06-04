@@ -66,6 +66,7 @@ class AppConfigRequest extends FormRequest
             'consumer_data_privacy_policy_link' => 'nullable|url',
             'secure_checkout_policy_link' => 'nullable|url',
             'terms_and_conditions_link' => 'nullable|url',
+            'allow_payment_method_deletion' => 'boolean',
         ];
     }
 }

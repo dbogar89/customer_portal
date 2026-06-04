@@ -281,6 +281,11 @@ class BillingController extends Controller
      */
     public function deletePaymentMethod($id): RedirectResponse
     {
+        $systemSetting = SystemSetting::first();
+        if ($systemSetting && $systemSetting->allow_payment_method_deletion === false) {
+            return redirect()->back()->withErrors(utrans('errors.paymentMethodDeletionDisabled'));
+        }
+
         $paymentMethods = $this->getPaymentMethods();
         foreach ($paymentMethods as $paymentMethod) {
             if ((int) $paymentMethod->id === (int) $id) {

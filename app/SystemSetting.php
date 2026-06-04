@@ -40,6 +40,7 @@ class SystemSetting extends Model
         'consumer_data_privacy_policy_link' => '',
         'secure_checkout_policy_link' => '',
         'terms_and_conditions_link' => '',
+        'allow_payment_method_deletion' => true,
 
     ];
 
@@ -53,5 +54,6 @@ class SystemSetting extends Model
         'data_usage_enabled' => 'boolean',
         'contracts_enabled' => 'boolean',
         'stripe_enabled' => 'boolean',
+        'allow_payment_method_deletion' => 'boolean',
     ];
 }

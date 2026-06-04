@@ -157,6 +157,7 @@ class AppConfigController extends Controller
                 'consumer_data_privacy_policy_link',
                 'secure_checkout_policy_link',
                 'terms_and_conditions_link',
+                'allow_payment_method_deletion',
             ]));
 
             /**
